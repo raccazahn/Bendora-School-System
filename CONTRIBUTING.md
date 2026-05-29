@@ -76,5 +76,4 @@ All PRs require at least **1 approval** from a Bendora core engineer. Reviewers 
 - 🛠️ Help: Tag `@bendora/engineering` in your PR comments
 
 <span style="color:#0A2540">*Engineered for impact. Built for scale. Optimized for Liberia.*<br>
-— Bendora Technology</span>
-```
+Bendora Technology</span>
