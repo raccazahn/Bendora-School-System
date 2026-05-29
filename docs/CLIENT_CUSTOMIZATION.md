@@ -71,7 +71,7 @@ Spin up a new school instance in under 5 minutes:
 
 
 # 1. Generate tenant schema & RLS policies
-python cli/provision.py --slug st-theresa --admin-email admin@sttheresa.edu.lr
+python cli/provision.py --slug st-theresa --admin-email fraccazahnmie@gmail.com
 
 # 2. Import initial data (optional CSV/JSON)
 python cli/import_data.py --slug st-theresa --file students_2026.csv --type enrollment
