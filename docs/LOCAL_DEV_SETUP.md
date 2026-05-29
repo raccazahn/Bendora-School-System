@@ -41,23 +41,21 @@ Press `Ctrl+Shift+X` → Search & install:
 3. Right-click in the same folder → **Paste**
 4. Rename the new file to `.env.local`
 5. Open `.env.local` and verify/update:
-   ```env
+ 
    APP_ENV=development
    DATABASE_URL=postgresql://postgres:postgres@localhost:5432/bendora_school
    REDIS_URL=redis://localhost:6379/0
    LOW_BANDWIDTH_MODE=true
    DEFAULT_TIMEZONE=Africa/Monrovia
-   ```
+
 
 ## 🐘 Step 5: Start Database & Cache (Docker)
 
 1. Open VS Code Terminal: ``Ctrl+` ``
 2. Run:
-   ```bash
    docker compose up -d postgres redis
    ```
 3. Wait ~15 seconds, then verify:
-   ```bash
    docker compose ps
    # Expected output: postgres and redis show as "healthy" or "running"
    ```
@@ -70,7 +68,7 @@ Press `Ctrl+Shift+X` → Search & install:
 ## 🧪 Step 6: Setup Python Environment & Dependencies
 
 In the VS Code Terminal:
-```bash
+
 # Create virtual environment
 python3 -m venv venv
 
@@ -82,20 +80,18 @@ source venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
-```
 
 ✅ VS Code should auto-detect the interpreter. If not:
 - Press `Ctrl+Shift+P` → `Python: Select Interpreter` → Choose `./venv/bin/python` (or `.\venv\Scripts\python.exe`)
 
 ## 🗄️ Step 7: Initialize Database & Seed Demo Data
 
-```bash
 # Apply schema migrations (creates tables, RLS policies, indexes)
 alembic upgrade head
 
 # Seed a demo tenant with sample users (admin, teacher, student)
 python scripts/seed_demo.py --tenant bendora-demo
-```
+
 
 🔐 **Demo Credentials (after seeding):**
 - Admin: `admin@bendora.demo` / `BendoraAdmin2026!`
@@ -105,18 +101,16 @@ python scripts/seed_demo.py --tenant bendora-demo
 ## 🚀 Step 8: Launch Development Servers
 
 ### Backend (FastAPI/Flask)
-```bash
+
 uvicorn src.main:app --reload --host 0.0.0.0 --port 8000
 # OR if using Flask:
 flask --app src.main run --reload --host 0.0.0.0 --port 8000
-```
 
 ### Frontend (React + Vite/Next.js)
 Open a **new terminal** (`Ctrl+Shift+`` `), navigate to `src/web/` (or root if monorepo):
-```bash
+
 npm install
 npm run dev
-```
 
 ✅ Open `http://localhost:5173` (or `3000`) in your browser  
 ✅ Log in with demo credentials  
@@ -133,7 +127,7 @@ npm run dev
 | `Slow page loads` | Enable `LOW_BANDWIDTH_MODE=true` in `.env.local` |
 
 ## 🧹 Cleanup (When Done Coding)
-```bash
+
 # Stop Docker containers
 docker compose down
 
@@ -142,6 +136,5 @@ deactivate   # or just close the terminal
 
 # Clear cache (optional)
 rm -rf venv/ __pycache__/ .pytest_cache/ .ruff_cache/
-```
 
 <span style="color:#0A2540">*Code locally. Ship confidently. Built for developers in Liberia and beyond. — Bendora Engineering*</span>
