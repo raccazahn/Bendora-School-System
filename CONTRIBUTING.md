@@ -7,7 +7,6 @@ This guide outlines how engineers, designers, and QA specialists can contribute 
 ## 🎯 Quick Start for Contributors
 
 1. **Fork & Clone**: Fork this repo, clone locally, and create a feature branch:
-   ```bash
    git checkout -b feat/your-feature-name
    ```
 2. **Setup Environment**: Follow our [Local Dev Guide](docs/LOCAL_DEV_SETUP.md) to run the app locally.
@@ -31,7 +30,6 @@ This guide outlines how engineers, designers, and QA specialists can contribute 
 ## 🧪 Before You Submit a PR
 
 Run these checks in your terminal:
-```bash
 # Backend
 pytest tests/ -v --cov=src
 black src/ tests/
@@ -45,7 +43,6 @@ npm run format
 # Security & Dependencies
 pip-audit
 npm audit
-```
 
 ## 📋 Pull Request Checklist
 - [ ] Feature matches a tracked issue/PRD requirement
