@@ -1,0 +1,130 @@
+# ============================================================================
+# BENDORA SCHOOL SYSTEM - .gitignore
+# Optimized for Python + Node + Docker + PostgreSQL + Liberia Dev Workflows
+# ============================================================================
+
+# 🐍 Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+.hypothesis/
+
+# 🌐 Node/npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-store/
+dist/
+.next/
+out/
+.nuxt/
+.vuepress/dist/
+
+# 🗄️ PostgreSQL & Database
+*.sql
+*.dump
+*.backup
+pg_log/
+postgresql.conf
+pg_hba.conf
+*.psql_history
+
+# ⚙️ Docker & Containers
+docker-compose.override.yml
+*.log
+.Dockerfile.swp
+.docker/
+!Dockerfile
+!docker-compose.yml
+
+# 🔐 Environment & Secrets (NEVER COMMIT)
+.env
+.env.local
+.env.production
+.env.staging
+*.pem
+*.key
+*.crt
+secrets/
+config/clients/*/secrets.*
+config/active/
+
+# 💻 IDE & Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.temp
+*~
+
+# 🧪 Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.xml
+.report/
+logs/
+
+# 📦 Build Artifacts
+build/
+dist/
+*.whl
+*.tar.gz
+*.zip
+
+# 🌍 OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+
+# 📄 Documentation (Auto-generated)
+docs/architecture/diagrams/*.png
+docs/performance/benchmarks/*.json
+docs/security/scan-results/
+
+# 🇱🇷 Local Dev (Liberia-specific)
+# Ignore heavy assets that can be regenerated
+assets/clients/*/raw/
+assets/temp/
+uploads/
+
+# ✅ Keep these (example/templates)
+!.env.example
+!config/clients/README.md
+!docs/
+!src/
+!tests/
+!scripts/
