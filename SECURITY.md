@@ -47,7 +47,6 @@ npm audit --audit-level=moderate
 
 # Secret/leak detection
 gitleaks detect --source .
-```
 
 ## 🔐 Production Hardening Checklist
 - [ ] `APP_ENV=production` (disables debug, enables secure headers)
