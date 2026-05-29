@@ -1,9 +1,7 @@
-```markdown
-<!--
   Bendora Technology - School Portal Platform
   Engineering-Grade, Multi-Tenant, Customizable Education Management System
   Theme: Engineering Blue (#0A2540, #0056A3, #1E88E5)
--->
+
 
 <div align="center">
 
