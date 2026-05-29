@@ -37,7 +37,7 @@ Designed to meet or exceed standards relevant to educational institutions in Lib
 
 ## 🧪 Security Testing (For Contributors)
 Before submitting code, ensure:
-```bash
+
 # Python security scan
 pip-audit
 bandit -r src/
